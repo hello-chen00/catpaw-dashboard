@@ -309,7 +309,6 @@
   const DATA_URL = "./data.json?t=" + Date.now();
 
   Promise.resolve(window.__INLINE_DATA__)
-    .then(r => r.json())
     .then(data => render(data))
     .catch(e => {
       document.getElementById("updated").textContent = "数据加载失败，请先运行 generate_data.py";
